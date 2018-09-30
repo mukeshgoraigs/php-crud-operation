@@ -1,0 +1,40 @@
+.top-bar{
+    background: #009999;
+
+}
+.mynav li{
+    float: left;
+    display: block;
+    padding: 20px;
+    tab-size: 20px;
+}
+.active {
+    background:#009999;
+}
+.my-menu{
+    margin-top: 10px;
+
+}
+.my-menu .navbar-default{
+    background: none;
+    border: none;
+}
+.my-menu .mynav .active a , .my-menu .mynav .active a:hover{
+
+    color: white;
+}
+.my-menu .mynav li a:hover{
+
+    background-color: #009999;
+    color: white;
+    padding: 20px;
+}
+.heading{
+    text-align: center;
+    padding: 5px;
+    font-size: 35px;
+    font-weight: 800;
+    border-width: 2px;
+    border-bottom-style: ridge;
+    border-color: #009999;
+}
