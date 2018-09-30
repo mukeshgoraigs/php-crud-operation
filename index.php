@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>php-crud operation</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -43,10 +43,12 @@ $rs=mysqli_query($conn,$s1);
 <?php
 while($row=mysqli_fetch_row($rs)) { ?>
 
-
 <tr>
     <td style='width: 200px;'><?php echo $row['1']; ?></td><td style='width: 600px;'><?php echo $row['2']; ?></td><td><?php echo $row['3']; ?></td><td><?php echo $row['4']; ?></td>
+    <td><a href="edit.php?id=<?php echo $row['0']; ?>"><button type="button" class="btn btn-danger" >Edit</button></a>&nbsp;&nbsp;&nbsp<a href="delete.php?id=<?php echo $row['0']; ?>"><button type="button" class="btn btn-primary" >Delete</button></a></td>
   </tr>
+
+
 <?php } ?>
 
 
