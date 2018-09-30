@@ -1,23 +1,13 @@
 <?php
 
-
-$servername="localhost";
-$username="root";
-$password="";
-$dbname="data";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include 'connection.php';
 
 $id=$_GET['id'];
 
 
 $sql = "DELETE FROM base WHERE id='$id'";
-
-if($conn->query($sql) === TRUE){
+$query=mysqli_query($conn,$sql);
+if($query){
  header("Location: http://localhost/php-project/");
  }
  else {

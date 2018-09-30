@@ -45,7 +45,7 @@ while($row=mysqli_fetch_row($rs)) { ?>
 
 <tr>
     <td style='width: 200px;'><?php echo $row['1']; ?></td><td style='width: 600px;'><?php echo $row['2']; ?></td><td><?php echo $row['3']; ?></td><td><?php echo $row['4']; ?></td>
-    <td><a href="edit.php?id=<?php echo $row['0']; ?>"><button type="button" class="btn btn-danger" >Edit</button></a>&nbsp;&nbsp;&nbsp<a href="delete.php?id=<?php echo $row['0']; ?>"><button type="button" class="btn btn-primary" >Delete</button></a></td>
+    <td><a href="update.php?id=<?php echo $row['0']; ?>"><button type="button" class="btn btn-primary" >Edit</button></a>&nbsp;&nbsp;&nbsp<a href="delete.php?id=<?php echo $row['0']; ?>"><button type="button" class="btn btn-danger" >Delete</button></a></td>
   </tr>
 
 
@@ -55,7 +55,7 @@ while($row=mysqli_fetch_row($rs)) { ?>
 </table>
 </div>
 
-<form method="POST" action="insert.php">
+<form method="GET" name="update" action="insert.php">
 
         <div class="row ">
             <div class="col-md-4 offset-4">
