@@ -18,7 +18,7 @@ $sql = "INSERT INTO base(name,email,phone,password)
 VALUES ('$name','$email','$phone','$password')";
 
 if($conn->query($sql) === TRUE){
- echo "data inserted";
+ header("Location: http://localhost/php-project/");
  }
  else {
  echo  "Error: " . $sql . "<br>" . $conn->error;

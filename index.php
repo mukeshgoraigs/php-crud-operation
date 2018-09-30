@@ -8,6 +8,7 @@
 
 </head>
 <body>
+  <div class="container-fluid">
 <?php
 $servername="localhost";
 $username="root";
@@ -38,22 +39,22 @@ $rs=mysqli_query($conn,$s1);
 <th colspan="2">Action</th>
 </tr>
 </thead>
-<?php
 
-while($row=mysqli_fetch_row($rs))
-{
-echo "<pre>
-Name : $row[0]<br />
-Email : $row[1]<br />
-Mobile no : $row[2]<br />
-Password : $row[3]<br />
-</pre>";
-}
-?>
+<?php
+while($row=mysqli_fetch_row($rs)) { ?>
+
+
+<tr>
+    <td style='width: 200px;'><?php echo $row['1']; ?></td><td style='width: 600px;'><?php echo $row['2']; ?></td><td><?php echo $row['3']; ?></td><td><?php echo $row['4']; ?></td>
+  </tr>
+<?php } ?>
+
+
 </table>
 </div>
+
 <form method="POST" action="insert.php">
-    <div class="container-fluid">
+
         <div class="row ">
             <div class="col-md-4 offset-4">
                 <div class="form-group">
